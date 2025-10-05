@@ -13,7 +13,7 @@ class Task
     }
     public Task(string description, int priority) : this(description)
     {
-        this._priority = (priority < 1 && priority > 5) ? priority : 1 ;
+        this._priority = (priority < 1 || priority > 5) ? priority : 1 ;
     }
     public Task(string description, int priority, bool isCompleted) : this(description, priority)
     {
@@ -49,6 +49,5 @@ class MyClass
 
         task2.Complete();
         task2.Print();
-        
     }
 }
