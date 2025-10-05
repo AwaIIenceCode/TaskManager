@@ -2,7 +2,7 @@
 
 class Task
 {
-private readonly string _description;
+    private readonly string _description;
     private int _priority;
     private bool _isCompleted;
 
