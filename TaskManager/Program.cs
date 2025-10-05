@@ -32,7 +32,7 @@ class Task
     public void Print()
     { 
      string status = _isCompleted ? "Yes" : "No";
-     Console.WriteLine($"Task: {_description} Priority: {_priority} Completed: {status}");   
+     Console.WriteLine($"Task: {_description}, Priority: {_priority}, Completed: {status}");   
     }
 }
 class MyClass
