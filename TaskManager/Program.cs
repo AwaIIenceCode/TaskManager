@@ -1,5 +1,4 @@
 ﻿using System;
-
 class Task
 {
     private readonly string _description;
@@ -24,6 +23,11 @@ class Task
     {
         this._isCompleted = true;
         Console.WriteLine($"The task \"{_description}\" is complete!");
+    }
+    public void NotComplete()
+    {
+        this._isCompleted = false;
+        Console.WriteLine($"The task \"{_description}\" is not complete!");
     }
     public void Print()
     { 
