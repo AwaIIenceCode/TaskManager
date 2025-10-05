@@ -38,5 +38,17 @@ class Task
 class MyClass
 {
     static void Main()
-    {}
+    {
+        Task task1 = new Task("Write code");
+        Task task2 = new Task("Fix bugs", 3);
+        Task task3 = new Task("Deploy app", 5, true);
+
+        task1.Print();
+        task2.Print();
+        task3.Print();
+
+        task2.Complete();
+        task2.Print();
+        
+    }
 }
