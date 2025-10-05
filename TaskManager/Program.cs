@@ -2,7 +2,7 @@
 
 class Task
 {
-    private readonly string _description;
+private readonly string _description;
     private int _priority;
     private bool _isCompleted;
 
@@ -16,7 +16,7 @@ class Task
 
     public Task(string description, int priority) : this(description)
     {
-        this._priority = priority;
+        Priority = priority;
     }
 
     public Task(string description, int priority, bool isCompleted) : this(description, priority)
@@ -35,7 +35,7 @@ class Task
         set
         {
             if (value < 1 || value > 5)
-                throw new ArgumentException("Priority must be between 1 and 5");
+                throw new ArgumentException("Priority must be between 1 and 5!");
 
             _priority = value;
         }
@@ -61,8 +61,9 @@ class Task
     {
         Console.WriteLine($"Task: {Description}, Priority: {Priority} ({Status}), Completed: {IsCompleted}");
     }
+}
 
-    class MyClass
+class MyClass
     {
         static void Main()
         {
@@ -78,4 +79,3 @@ class Task
             task2.Print();
         }
     }
-}
