@@ -16,7 +16,16 @@ private readonly string _description;
 
     public Task(string description, int priority) : this(description)
     {
-        Priority = priority;
+        try
+        {
+            Priority = priority;
+        }
+        
+        catch (ArgumentException)
+        {
+            Priority = 1;
+            Console.WriteLine("Invalid priority, set to 1.");
+        }
     }
 
     public Task(string description, int priority, bool isCompleted) : this(description, priority)
