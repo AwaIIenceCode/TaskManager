@@ -56,10 +56,11 @@ private readonly string _description;
     }
 
     public string Status => Priority >= 4 ? "High" : Priority >= 2 ? "Medium" : "Low";
-
+    
     public void Print()
     {
-        Console.WriteLine($"Task: {Description}, Priority: {Priority} ({Status}), Completed: {IsCompleted}");
+        string status = IsCompleted ? "Yes" : "No";
+        Console.WriteLine($"Task: {Description}, Priority: {Priority} ({Status}), Completed: {status}");
     }
 }
 
